@@ -16,7 +16,7 @@ public class BancoDeDados
 		
 		xba = obterEstados();
 		
-		
+		//	Tipo nomeGenerico : listaQueDesejaPercorrer
 		for(Estado estado : xba)
 		{
 			if (estado.getId() == id)
