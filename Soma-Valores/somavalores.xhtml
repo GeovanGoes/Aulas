@@ -56,8 +56,9 @@ xmlns:p="http://primefaces.org/ui">
 	<!-- Coloquei um id nesse elemento pra conseguir buscar ele através do javascript -->
 	<p:outputLabel value="Total: 0,00" id="label-valor-total"/>
 
+	<!-- Importação do arquivo javascript functions.js esse arquivo deve estar em resources/js/ -->
 	<!-- Importante, coloque dessa forma... os scripts num arquivo separado, JSF tem sérios problemas com javascript direto na página. -->
-	<script src="functions.js"/>
-
+	<h:outputScript name="js/functions.js"/>
+	
 </h:body>
 </html>
