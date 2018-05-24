@@ -1,7 +1,11 @@
 package app;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+
+import org.joda.time.DateTime;
 
 import banco.BancoDeDados;
 import modelos.Cidade;
@@ -11,6 +15,34 @@ public class Aplicacao
 {
 	public static void main(String[] args) 
 	{
+		
+		Calendar instance = Calendar.getInstance();
+		int mes = instance.get(Calendar.MONTH);
+		int ano = instance.get(Calendar.YEAR);
+		
+		String mesBarraAno = "";
+		
+		if (mes+1 < 10)
+		{
+			mesBarraAno = "0" + String.valueOf(mes+1) + "/" +ano; 
+		}
+		else
+		{
+			mesBarraAno = String.valueOf(mes+1) + "/" +ano;
+		}
+		
+		
+		System.out.println(mesBarraAno) ;
+		
+		///
+		
+		DateTime hoje = DateTime.now();
+		System.out.println(hoje);
+		int monthOfYear = hoje.getMonthOfYear();
+		
+		System.out.println(monthOfYear);
+		
+		
 		
 		System.out.println("Iniciando");
 		
@@ -38,6 +70,5 @@ public class Aplicacao
 		{
 			System.out.println("Não existe estado com o id " + idEstado);
 		}
-		
 	}
 }
