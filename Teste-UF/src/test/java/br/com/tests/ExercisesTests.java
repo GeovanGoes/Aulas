@@ -12,7 +12,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import study.Exercises;
+import study.ex.Exercises;
 
 /**
  * @author geovan.goes
