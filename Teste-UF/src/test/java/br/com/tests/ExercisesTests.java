@@ -5,13 +5,14 @@ package br.com.tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import app.Exercises;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import study.Exercises;
 
 /**
  * @author geovan.goes

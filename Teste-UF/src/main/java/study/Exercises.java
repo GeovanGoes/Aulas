@@ -1,4 +1,4 @@
-package app;
+package study;
 import java.util.List;
 
 /**
@@ -14,7 +14,7 @@ public class Exercises
 
 	
 	/**
-	 * Método responsável por inverter uma palavra
+	 * Mï¿½todo responsï¿½vel por inverter uma palavra
 	 * @param palavra
 	 * @return
 	 */
