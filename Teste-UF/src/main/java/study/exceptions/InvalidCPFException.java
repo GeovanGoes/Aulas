@@ -1,5 +1,6 @@
 package study.exceptions;
 
+
 public class InvalidCPFException extends Exception
 {
 
@@ -7,7 +8,7 @@ public class InvalidCPFException extends Exception
 	{
 		super(string);
 	}
-
+	
 	/**
 	 * 
 	 */
