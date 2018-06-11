@@ -82,7 +82,7 @@ public class Exercises
 		
 		if (lista != null && !lista.isEmpty())
 		{
-			Integer somaTotal = 0;
+			Double somaTotal = 0D;
 			
 			for (Integer item : lista)
 				somaTotal = somaTotal + item;

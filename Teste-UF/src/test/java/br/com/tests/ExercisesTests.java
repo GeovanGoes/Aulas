@@ -154,4 +154,12 @@ public class ExercisesTests
 		Double calcularMediaDeUmaLista = exercises.calcularMediaDeUmaLista(lista);
 		assertEquals(new Double(10.0), calcularMediaDeUmaLista);
 	}
+	
+	@Test
+	public void deveCalcularComNumerosNegativos()
+	{
+		List<Integer> lista = Arrays.asList(new Integer[]{-10, 1, -12});
+		Double calcularMediaDeUmaLista = exercises.calcularMediaDeUmaLista(lista);
+		assertEquals(new Double(-7), calcularMediaDeUmaLista);
+	}
 }
