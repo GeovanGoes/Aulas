@@ -2,20 +2,27 @@ package app;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import study.Validacao;
 import study.exceptions.InvalidCPFException;
 import study.exceptions.InvalidEmailException;
 
 public class AppComValidacao
 {
+	
+	/**
+	 * Instancia de log
+	 * */
+	final static Logger _log = Logger.getLogger(AppComValidacao.class);
+	
 	public static void main(String[] args)
 	{
-		
+		_log.info("Testing my log system...");
 		try
 		{
 			System.out.println("Digite seu cpf:");
 			Scanner sc = new Scanner(System.in);
-			sc.close();
 			String cpf = sc.next();
 			
 			System.out.println("Digite seu e-mail:");
@@ -28,17 +35,19 @@ public class AppComValidacao
 			
 			validarComExcecao(cpf, email, validador);
 			
+			sc.close();
+			
 		}
 		catch(IllegalStateException ise)
 		{
-			System.out.println("O scanner está fechado...");
+			_log.error("O scanner está fechado...");
 		}
 		catch (Exception e)
 		{
-			System.out.println("Problemas....");
+			_log.error("Problemas....");
 		}
 		
-		System.out.println("Finalizado....");
+		_log.info("Finalizado....");
 	}
 	
 	private static void validarComExcecao(String cpf, String email, Validacao validador)
@@ -51,7 +60,7 @@ public class AppComValidacao
 		}
 		catch(InvalidCPFException e)
 		{
-			System.out.println(e.getMessage());
+			_log.error(e.getMessage());
 			houveExcecao = true;
 		}
 		
@@ -61,12 +70,12 @@ public class AppComValidacao
 		}
 		catch(InvalidEmailException em)
 		{
-			System.out.println(em.getMessage());
+			_log.error(em.getMessage());
 			houveExcecao = true;
 		}
 		
 		if (!houveExcecao)
-			System.out.println("Todos os dados são válidos");
+			_log.info("Todos os dados são válidos");
 	}
 
 	/***
@@ -80,16 +89,16 @@ public class AppComValidacao
 		boolean cpfEhValido = validador.validarCPF(cpf);
 		
 		if (!cpfEhValido)
-			System.out.println("O cpf é inválido");
+			_log.error("O cpf é inválido");
 		
 		boolean emailEhValido = validador.validarEmail(email);
 		
 		if (!emailEhValido)
-			System.out.println("O E-mail é inválido");
+			_log.error("O E-mail é inválido");
 		
 		if (cpfEhValido && emailEhValido)
 		{
-			System.out.println("Todos os dados são válidos");
+			_log.info("Todos os dados são válidos");
 		}
 	}
 }
