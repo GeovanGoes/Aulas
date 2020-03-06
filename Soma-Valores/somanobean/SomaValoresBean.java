@@ -22,7 +22,7 @@ public class SomaValoresBean implements Serializable
 	 */
 	private static final long serialVersionUID = 1144184491509014935L;
 	
-	private String valorUm = "";
+	private String _valorUm = "";
 	private String valorDois  = "";
 	private String valorTres = "";
 	private String valorQuatro = "";
@@ -34,12 +34,16 @@ public class SomaValoresBean implements Serializable
 	 */
 	public void soma()
 	{ 
+	
+	//opa add um coment aqui
 		total = "Total: " + String.valueOf(
-											obterDoubleDaString(valorUm) + 
+											obterDoubleDaString(_valorUm) + 
 											obterDoubleDaString(valorDois) + 
 											obterDoubleDaString(valorTres) + 
 											obterDoubleDaString(valorQuatro)
 											);
+											
+											// e outr oaqui
 	}
 	
 	private Double obterDoubleDaString(String param)
@@ -65,19 +69,19 @@ public class SomaValoresBean implements Serializable
 	}
 
 	/**
-	 * @return the valorUm
+	 * @return the _valorUm
 	 */
 	public String getValorUm()
 	{
-		return valorUm;
+		return _valorUm;
 	}
 
 	/**
-	 * @param valorUm the valorUm to set
+	 * @param _valorUm the _valorUm to set
 	 */
-	public void setValorUm(String valorUm)
+	public void setValorUm(String _valorUm)
 	{
-		this.valorUm = valorUm;
+		this._valorUm = _valorUm;
 	}
 
 	/**
